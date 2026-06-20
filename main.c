@@ -5,7 +5,7 @@ int main(){
     int resposta;
     double numero1,numero2;
     do{
-        printf("bem-vindo a calculadora, digite a operacao a ser realizada:\n 0 para fechar a calculadora \n 1 para soma \n 2 para subtrai \n 3 para multiplicar \n 4 para dividir \n 5 para calcular a raiz quadrada \n 6 para calcular uma potencia:\n");
+        printf("bem-vindo a calculadora, digite a operacao a ser realizada:\n 0 para fechar a calculadora \n 1 para soma \n 2 para subtrai \n 3 para multiplicar \n 4 para dividir \n 5 para calcular a raiz quadrada \n 6 para calcular uma potencia \n 7 para calcular uma raiz cubica:\n");
         scanf("%d",&resposta);
         switch(resposta){
             case 0:
@@ -59,6 +59,11 @@ int main(){
                 printf("agora informe o valor do segundo numero: ");
                 scanf("%lf",&numero2);
                 printf("resultado da operacao: %.2lf ^ %.2lf = %.2lf",numero1,numero2,pow(numero1,numero2));
+                break;
+            case 7:
+                printf("informe o numero para descobrir sua raiz cubica: ");
+                scanf("%lf",&numero1);
+                printf("resultado da operacao: √%.2lf = %.2lf",numero1,cbrt(numero1));
                 break;
             default:
                 printf("operacao não encontradar");

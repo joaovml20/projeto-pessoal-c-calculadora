@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <math.h>
 
+void leituraDeDoisNumero(double *ponteironumero1,double *ponteironumero2){
+    printf("informe o valor do primeiro numero: ");
+    scanf("%lf",ponteironumero1);
+    printf("agora informe o valor do segundo numero: ");
+    scanf("%lf",ponteironumero2);
+}
+
 int main(){
     int resposta;
     double numero1,numero2;
@@ -13,10 +20,7 @@ int main(){
                 printf("\n");
                 break;
             case 1:
-                printf("informe o valor do primeiro numero: ");
-                scanf("%lf",&numero1);
-                printf("agora informe o valor do segundo numero: ");
-                scanf("%lf",&numero2);
+                leituraDeDoisNumero(&numero1,&numero2);
                 printf("resultado da operacao: %.2lf + %.2lf = %.2lf ",numero1,numero2,numero1 + numero2);
                 break;
             case 2:

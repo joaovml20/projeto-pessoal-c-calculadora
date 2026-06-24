@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-void leituraDeDoisNumero(double *ponteironumero1,double *ponteironumero2){
+void leituraDeDoisNumeros(double *ponteironumero1,double *ponteironumero2){
     printf("informe o valor do primeiro numero: ");
     scanf("%lf",ponteironumero1);
     printf("agora informe o valor do segundo numero: ");
@@ -20,28 +20,19 @@ int main(){
                 printf("\n");
                 break;
             case 1:
-                leituraDeDoisNumero(&numero1,&numero2);
+                leituraDeDoisNumeros(&numero1,&numero2);
                 printf("resultado da operacao: %.2lf + %.2lf = %.2lf ",numero1,numero2,numero1 + numero2);
                 break;
             case 2:
-                printf("informe o valor do primeiro numero: ");
-                scanf("%lf",&numero1);
-                printf("agora informe o valor do segundo numero: ");
-                scanf("%lf",&numero2);
+                leituraDeDoisNumeros(&numero1,&numero2);
                 printf("resultado da operacao: %.2lf - %.2lf = %.2lf",numero1,numero2,numero1 - numero2);
                 break;
             case 3:
-                printf("informe o valor do primeiro numero: ");
-                scanf("%lf",&numero1);
-                printf("agora informe o valor do segundo numero: ");
-                scanf("%lf",&numero2);
+                leituraDeDoisNumeros(&numero1,&numero2);
                 printf("resultado da operacacao: %.2lf * %.2lf = %.2lf",numero1,numero2,numero1 * numero2);
                 break;
             case 4:
-                printf("informe o valor do primeiro numero: ");
-                scanf("%lf",&numero1);
-                printf("agora informe o valor do segundo numero: ");
-                scanf("%lf",&numero2);
+                leituraDeDoisNumeros(&numero1,&numero2);
                 if(numero2 == 0){
                 printf("impossivel dividir por zero");
                 } else {
@@ -58,10 +49,7 @@ int main(){
                 printf("resultado da operacao: √%.2lf = %.2lf",numero1,sqrt(numero1));
                 break;
             case 6:
-                printf("informe o valor do primeiro numero: ");
-                scanf("%lf",&numero1);
-                printf("agora informe o valor do segundo numero: ");
-                scanf("%lf",&numero2);
+                leituraDeDoisNumeros(&numero1,&numero2);
                 printf("resultado da operacao: %.2lf ^ %.2lf = %.2lf",numero1,numero2,pow(numero1,numero2));
                 break;
             case 7:

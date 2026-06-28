@@ -7,7 +7,10 @@ void leituraDeDoisNumeros(double *ponteironumero1,double *ponteironumero2){
     printf("agora informe o valor do segundo numero: ");
     scanf("%lf",ponteironumero2);
 }
-
+void leituraDeUmNumero(double *ponteironumero1){
+    printf("informe o valor do numero: ");
+    scanf("%lf",ponteironumero1);
+}
 int main(){
     int resposta;
     double numero1,numero2;
@@ -40,8 +43,7 @@ int main(){
                 }
                 break;
             case 5:
-                printf("informe o numero para descobrir sua raiz quadrada: ");
-                scanf("%lf",&numero1);
+                leituraDeUmNumero(&numero1);
                 while(numero1 < 0){
                     printf("impossivel calcular a raiz quadrada de numero negativo, tente novamente com outro numero: ");
                     scanf("%lf",&numero1);
@@ -53,8 +55,7 @@ int main(){
                 printf("resultado da operacao: %.2lf ^ %.2lf = %.2lf",numero1,numero2,pow(numero1,numero2));
                 break;
             case 7:
-                printf("informe o numero para descobrir sua raiz cubica: ");
-                scanf("%lf",&numero1);
+                 leituraDeUmNumero(&numero1);
                 printf("resultado da operacao: √%.2lf = %.2lf",numero1,cbrt(numero1));
                 break;
             default:
